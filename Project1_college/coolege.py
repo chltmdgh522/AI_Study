@@ -30,8 +30,8 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 # 확률일때 loss 함수는 binary_cross... 써야됨
 
 
-model.fit(np.array(x_data), np.array(y_data), epochs=10000)  # 모델 학습 리스트를 넘파이 배열로 바꿔서 넣어야됨
+model.fit(np.array(x_data), np.array(y_data), epochs=100000)  # 모델 학습 리스트를 넘파이 배열로 바꿔서 넣어야됨
 
 # 예측
-predict = model.predict(np.array([[800, 4, 1], [100, 1.5, 4]]))
+predict = model.predict(np.array([[800, 4, 1], [100, 1.5, 4],[800, 3.98, 1], [700, 3.78, 2]]))
 print(predict)
